@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-This is a login page.
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="card" style="width: 20rem;">
+            <div class="card-block">
+            <h4 class="card-title">This is a login page</h4>
+            <h6 class="card-subtitle mb-2 text-muted">but its also a bootstrap 4 card</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Login</a>
+            <a href="#" class="card-link">Register</a>
+          </div>
+        </div>
+    </div>
+{% endblock %}
