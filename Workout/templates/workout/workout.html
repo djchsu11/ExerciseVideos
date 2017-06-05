@@ -4,7 +4,21 @@
     <h1> Welcome, {{ patient.patient_loginName }}</h1>
 
     Here are your exercises for today:
-    {% for exercise in patient.exercise_set.all %}
-        <li><a href="{{ exercise.video_link }}">{{ exercise.exercise_name }}</a></li>
-    {% endfor %}
+
+    <div class="row">
+        {% for exercise in patient.exercise_set.all %}
+            <div class="col">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top" src="http://via.placeholder.com/318x180" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">{{ exercise.exercise_name }}</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, usu in odio quaerendum, no pro paulo
+                            voluptatibus, elit ubique signiferumque at his. </p>
+                        <a href="{{ exercise.video_link }}" class="btn btn-primary">Go</a>
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
